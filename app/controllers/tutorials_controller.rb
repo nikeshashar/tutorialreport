@@ -3,6 +3,7 @@ class TutorialsController < ApplicationController
 
   def index
     @tutorials = Tutorial.all
+    @is_admin = current_user.admin? if current_user
   end
 
   def new

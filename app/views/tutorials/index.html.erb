@@ -5,3 +5,7 @@
 <% else %>
   <h1><%= 'There are currently no tutorials' %></h1>
 <% end %>
+
+<% if @is_admin %>
+  <%= link_to "Add a tutorial", new_tutorial_path(@tutorial) %>
+<% end %>

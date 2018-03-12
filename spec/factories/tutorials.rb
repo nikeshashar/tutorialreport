@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :tutorial do
-    name 'Code Academy'
+    title 'Code Academy'
     description 'The go to tutorial'
     link 'https://www.codecademy.com/'
-    average_score 9
+    rating 9
   end
 end

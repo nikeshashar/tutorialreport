@@ -23,6 +23,6 @@ class TutorialsController < ApplicationController
                                      :rating,
                                      :language,
                                      :suitability,
-                                     :type)
+                                     :type_of_tutorial)
   end
 end

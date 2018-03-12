@@ -1,6 +1,6 @@
 <% if @tutorials.any? %>
   <% @tutorials.each do |t| %>
-    <%= t.name %>
+    <%= t.title %>
   <% end %>
 <% else %>
   <h1><%= 'There are currently no tutorials' %></h1>

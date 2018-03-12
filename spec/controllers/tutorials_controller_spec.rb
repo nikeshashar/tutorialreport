@@ -4,7 +4,7 @@ RSpec.describe TutorialsController, type: :controller do
   let(:tutorial) { create(:tutorial) }
   let(:second_tutorial) { create(:tutorial) }
 
-  context 'when index called with anonymous user' do
+  context 'when #index called with anonymous user' do
     it 'returns both tutorials' do
       login_with nil
       get :index
@@ -12,14 +12,14 @@ RSpec.describe TutorialsController, type: :controller do
       expect(assigns(:tutorials)).to eq([tutorial, second_tutorial])
     end
 
-    it 'renders the index template' do
+    it 'renders the #index template' do
       get :index
 
       expect(response).to render_template('index')
     end
   end
 
-  context 'when new called as a user' do
+  context 'when #new called as a user' do
     it 'redirects to tutorials_path' do
       login_with create(:user, :standard_user)
       get :new
@@ -28,12 +28,22 @@ RSpec.describe TutorialsController, type: :controller do
     end
   end
 
-  context 'when new called as an admin' do
+  context 'when #new called as an admin' do
     it 'displays the new view' do
       login_with create(:user, :admin)
       get :new
 
       expect(assigns(:tutorial)).to be_a_new(Tutorial)
+    end
+  end
+
+  context 'when #create called' do
+    it 'creates a new tutorial' do
+      login_with create(:user, :admin)
+      tutorial_params = FactoryBot.attributes_for(:tutorial)
+
+      expect { post :create, tutorial: tutorial_params }
+        .to change(Tutorial, :count).by(1)
     end
   end
 end

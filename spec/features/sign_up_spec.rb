@@ -18,6 +18,8 @@ RSpec.describe 'Signing Up', type: feature do
         fill_in 'user_password_confirmation', with: user_password
         find('[name=commit]').click
       end
+
+      expect(page).to have_content 'Welcome! You have signed up successfully.'
     end
   end
 end

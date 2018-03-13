@@ -1,6 +1,6 @@
 <% if @tutorials.any? %>
   <% @tutorials.each do |t| %>
-    <%= t.title %>
+     <h2><%= link_to "#{t.title}", tutorial_path(t.id) %><h2>
   <% end %>
 <% else %>
   <h1><%= 'There are currently no tutorials' %></h1>

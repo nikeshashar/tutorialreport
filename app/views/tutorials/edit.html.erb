@@ -1,0 +1,15 @@
+<%= form_for @tutorial do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :link %>
+  <%= f.text_field :link %>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %>
+  <%= f.label :language %>
+  <%= f.text_field :language %>
+  <%= f.label :suitability %>
+  <%= f.text_field :suitability %>
+  <%= f.label :type_of_tutorial %>
+  <%= f.text_field :type_of_tutorial %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+<% if @tutorial %>
+  <h5><br><%= @tutorial.title %></br></h5>
+  <h5><br><%= @tutorial.link %></br></h5>
+  <h5><br><%= @tutorial.rating %></br></h5>
+  <h5><br><%= @tutorial.language %></br></h5>
+  <h5><br><%= @tutorial.suitability %></br></h5>
+  <h5><br><%= @tutorial.type_of_tutorial %></br></h5>
+<% end %>
+
+<% if @is_admin %>
+  <br><%=link_to 'Edit this tutorial', edit_tutorial_path%></br>
+<% end %>

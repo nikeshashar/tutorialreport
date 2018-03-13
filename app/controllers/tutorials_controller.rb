@@ -16,6 +16,22 @@ class TutorialsController < ApplicationController
     redirect_to '/tutorials'
   end
 
+  def edit
+    redirect_to '/tutorials' unless current_user.admin?
+    @tutorial = Tutorial.find(params[:id])
+  end
+
+  def update
+    @tutorial = Tutorial.find(params[:id])
+    @tutorial.update_attributes(tutorial_params)
+    redirect_to "/tutorials/#{params[:id]}"
+  end
+
+  def show
+    @tutorial = Tutorial.find(params[:id])
+    @is_admin = current_user.admin? if current_user
+  end
+
   private
 
   def tutorial_params

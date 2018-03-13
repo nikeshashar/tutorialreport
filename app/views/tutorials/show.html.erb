@@ -1,9 +1,19 @@
 <% if @tutorial %>
-  <h5><br><%= @tutorial.title %></br></h5>
+  <h2><br><%= @tutorial.title %></br></h2>
+
+  <%= 'Link' %>
   <h5><br><%= @tutorial.link %></br></h5>
+
+  <%= 'Average Rating' %>
   <h5><br><%= @tutorial.rating %></br></h5>
+
+  <%= 'Tutorial Language' %>
   <h5><br><%= @tutorial.language %></br></h5>
+
+  <%= 'Level' %>
   <h5><br><%= @tutorial.suitability %></br></h5>
+
+  <%= 'Tutorial Type' %>
   <h5><br><%= @tutorial.type_of_tutorial %></br></h5>
 <% end %>
 

@@ -19,4 +19,5 @@
 
 <% if @is_admin %>
   <br><%=link_to 'Edit this tutorial', edit_tutorial_path%></br>
+  <br><%=link_to 'Delete this tutorial', tutorial_path(@tutorial), method: :delete,  data: { confirm: 'Are you certain you want to delete this?' } %></br>
 <% end %>

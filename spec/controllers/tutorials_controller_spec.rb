@@ -95,4 +95,16 @@ RSpec.describe TutorialsController, type: :controller do
       expect(Tutorial.first.title).to eq new_title
     end
   end
+
+  context 'when #destroy called' do
+    let!(:tutorial) { create(:tutorial) }
+
+    it 'updates the correct tutorial' do
+      login_with create(:user, :admin)
+      delete :destroy, id: tutorial.id
+
+      expect(response).to redirect_to(tutorials_path)
+      expect(Tutorial.count).to eq 0
+    end
+  end
 end

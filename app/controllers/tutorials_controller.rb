@@ -32,6 +32,11 @@ class TutorialsController < ApplicationController
     @is_admin = current_user.admin? if current_user
   end
 
+  def destroy
+    Tutorial.find(params[:id]).destroy
+    redirect_to '/tutorials'
+  end
+
   private
 
   def tutorial_params

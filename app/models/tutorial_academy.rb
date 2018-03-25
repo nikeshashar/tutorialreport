@@ -1,0 +1,2 @@
+class TutorialAcademy < ApplicationRecord
+end

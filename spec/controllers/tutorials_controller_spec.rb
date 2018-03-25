@@ -25,7 +25,7 @@ RSpec.describe TutorialsController, type: :controller do
       login_with create(:user, :standard_user)
       get :new
 
-      expect(response).to redirect_to(tutorials_path)
+      expect(response).to redirect_to(sub_tutorials_path)
     end
   end
 
@@ -68,7 +68,7 @@ RSpec.describe TutorialsController, type: :controller do
     login_with create(:user, :standard_user)
     get :edit, id: tutorial.id
 
-    expect(response).to redirect_to(tutorials_path)
+    expect(response).to redirect_to(sub_tutorials_path)
   end
 
   context 'when #show successfully called' do
@@ -103,7 +103,7 @@ RSpec.describe TutorialsController, type: :controller do
       login_with create(:user, :admin)
       delete :destroy, id: tutorial.id
 
-      expect(response).to redirect_to(tutorials_path)
+      expect(response).to redirect_to(sub_tutorials_path)
       expect(Tutorial.count).to eq 0
     end
   end

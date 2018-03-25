@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :tutorials
+  resources :sub_tutorials
 
   root to: "landing_page#index"
 end

@@ -1,0 +1,2 @@
+class SubTutorial < ApplicationRecord
+end

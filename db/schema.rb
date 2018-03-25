@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312130307) do
+ActiveRecord::Schema.define(version: 20180325113602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "tutorials", force: :cascade do |t|
+  create_table "sub_tutorials", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "link"

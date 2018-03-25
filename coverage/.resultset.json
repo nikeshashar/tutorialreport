@@ -478,7 +478,7 @@
         null,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/factories/tutorials.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/factories/sub_tutorials.rb": [
         1,
         1,
         1,
@@ -554,7 +554,7 @@
         1,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/controllers/tutorials_controller_spec.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/controllers/sub_tutorials_controller_spec.rb": [
         1,
         null,
         1,
@@ -666,7 +666,7 @@
         null,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/controllers/tutorials_controller.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/controllers/sub_tutorials_controller.rb": [
         1,
         1,
         null,
@@ -909,7 +909,7 @@
         1,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/models/tutorial_spec.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/models/sub_tutorial_spec.rb": [
         1,
         null,
         1,
@@ -923,7 +923,7 @@
         null,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/models/tutorial.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/models/sub_tutorial.rb": [
         1,
         null
       ],
@@ -935,6 +935,6 @@
         null
       ]
     },
-    "timestamp": 1521578050
+    "timestamp": 1521979848
   }
 }

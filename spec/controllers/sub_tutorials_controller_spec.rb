@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe TutorialsController, type: :controller do
-  let(:tutorial) { create(:tutorial) }
-  let(:second_tutorial) { create(:tutorial) }
+RSpec.describe SubTutorialsController, type: :controller do
+  let(:sub_tutorial) { create(:sub_tutorial) }
+  let(:second_tutorial) { create(:sub_tutorial) }
   let(:new_title) { 'A New Title' }
 
   context 'when #index called with anonymous user' do
@@ -10,7 +10,7 @@ RSpec.describe TutorialsController, type: :controller do
       login_with nil
       get :index
 
-      expect(assigns(:tutorials)).to eq([tutorial, second_tutorial])
+      expect(assigns(:sub_tutorials)).to eq([sub_tutorial, second_tutorial])
     end
 
     it 'renders the #index template' do
@@ -34,31 +34,31 @@ RSpec.describe TutorialsController, type: :controller do
       login_with create(:user, :admin)
       get :new
 
-      expect(assigns(:tutorial)).to be_a_new(Tutorial)
+      expect(assigns(:sub_tutorial)).to be_a_new(SubTutorial)
     end
   end
 
   context 'when #create called' do
-    it 'creates a new tutorial' do
+    it 'creates a new sub_tutorial' do
       login_with create(:user, :admin)
-      tutorial_params = FactoryBot.attributes_for(:tutorial)
+      tutorial_params = FactoryBot.attributes_for(:sub_tutorial)
 
-      expect { post :create, tutorial: tutorial_params }
-        .to change(Tutorial, :count).by(1)
+      expect { post :create, sub_tutorial: tutorial_params }
+        .to change(SubTutorial, :count).by(1)
     end
   end
 
   context 'when #edit called' do
-    it 'allows the tutorial to be edited' do
+    it 'allows the sub_tutorial to be edited' do
       login_with create(:user, :admin)
-      get :edit, id: tutorial.id
+      get :edit, id: sub_tutorial.id
 
-      expect(assigns(:tutorial)).to eq tutorial
+      expect(assigns(:sub_tutorial)).to eq sub_tutorial
     end
 
     it 'redirects to edit_tutorial_path' do
       login_with create(:user, :admin)
-      get :edit, id: tutorial.id
+      get :edit, id: sub_tutorial.id
 
       expect(response).to render_template('edit')
     end
@@ -66,45 +66,45 @@ RSpec.describe TutorialsController, type: :controller do
 
   it 'blocks editing with standard_user' do
     login_with create(:user, :standard_user)
-    get :edit, id: tutorial.id
+    get :edit, id: sub_tutorial.id
 
     expect(response).to redirect_to(sub_tutorials_path)
   end
 
   context 'when #show successfully called' do
-    it 'shows the correct tutorial' do
+    it 'shows the correct sub_tutorial' do
       login_with create(:user, :standard_user)
-      get :show, id: tutorial.id
+      get :show, id: sub_tutorial.id
 
-      expect(assigns(:tutorial)).to eq tutorial
+      expect(assigns(:sub_tutorial)).to eq sub_tutorial
     end
 
     it 'renders the correct template' do
       login_with create(:user, :standard_user)
-      get :show, id: tutorial.id
+      get :show, id: sub_tutorial.id
 
       expect(response).to render_template('show')
     end
   end
 
   context 'when #update successfully called' do
-    it 'updates tutorial' do
+    it 'updates sub_tutorial' do
       login_with create(:user, :admin)
-      put :update, tutorial: { title: new_title }, id: tutorial.id
+      put :update, sub_tutorial: { title: new_title }, id: sub_tutorial.id
 
-      expect(Tutorial.first.title).to eq new_title
+      expect(SubTutorial.first.title).to eq new_title
     end
   end
 
   context 'when #destroy called' do
-    let!(:tutorial) { create(:tutorial) }
+    let!(:sub_tutorial) { create(:sub_tutorial) }
 
-    it 'updates the correct tutorial' do
+    it 'updates the correct sub_tutorial' do
       login_with create(:user, :admin)
-      delete :destroy, id: tutorial.id
+      delete :destroy, id: sub_tutorial.id
 
       expect(response).to redirect_to(sub_tutorials_path)
-      expect(Tutorial.count).to eq 0
+      expect(SubTutorial.count).to eq 0
     end
   end
 end

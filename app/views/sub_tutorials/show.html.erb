@@ -1,25 +1,25 @@
-<% if @tutorial %>
-  <h2><br><%= @tutorial.title %></br></h2>
+<% if @sub_tutorial %>
+  <h2><br><%= @sub_tutorial.title %></br></h2>
 
   <%= 'Link' %>
-  <h5><br><%= @tutorial.link %></br></h5>
+  <h5><br><%= @sub_tutorial.link %></br></h5>
 
   <%= 'Average Rating' %>
-  <h5><br><%= @tutorial.rating %></br></h5>
+  <h5><br><%= @sub_tutorial.rating %></br></h5>
 
   <%= 'Tutorial Language' %>
-  <h5><br><%= @tutorial.language %></br></h5>
+  <h5><br><%= @sub_tutorial.language %></br></h5>
 
   <%= 'Level' %>
-  <h5><br><%= @tutorial.suitability %></br></h5>
+  <h5><br><%= @sub_tutorial.suitability %></br></h5>
 
   <%= 'Tutorial Type' %>
-  <h5><br><%= @tutorial.type_of_tutorial %></br></h5>
+  <h5><br><%= @sub_tutorial.type_of_tutorial %></br></h5>
 <% end %>
 
 <% if @is_admin %>
   <br><%=link_to 'Edit this tutorial', edit_sub_tutorial_path%></br>
-  <br><%=link_to 'Delete this tutorial', sub_tutorial_path(@tutorial), method: :delete,  data: { confirm: 'Are you certain you want to delete this?' } %></br>
+  <br><%=link_to 'Delete this tutorial', sub_tutorial_path(@sub_tutorial), method: :delete,  data: { confirm: 'Are you certain you want to delete this?' } %></br>
 <% end %>
 
 <br><%= link_to 'Return to the Tutorial list', sub_tutorials_path %></br>

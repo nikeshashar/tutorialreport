@@ -1,5 +1,5 @@
-<% if @tutorials.any? %>
-  <% @tutorials.each do |t| %>
+<% if @sub_tutorials.any? %>
+  <% @sub_tutorials.each do |t| %>
      <h2><%= link_to "#{t.title}", sub_tutorial_path(t.id) %><h2>
   <% end %>
 <% else %>
@@ -7,7 +7,7 @@
 <% end %>
 
 <% if @is_admin %>
-  <br><%= link_to "Add a tutorial", new_sub_tutorial_path(@tutorial) %></br>
+  <br><%= link_to "Add a tutorial", new_sub_tutorial_path(@sub_tutorial) %></br>
 <% end %>
 
 <br><%= link_to 'Return to landing page', root_path %></br>

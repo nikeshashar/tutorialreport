@@ -16,7 +16,7 @@ RSpec.describe 'Signing In', type: feature do
         find('[name=commit]').click
       end
 
-      visit '/tutorials'
+      visit '/sub_tutorials'
 
       expect(page).not_to have_content('Add a tutorial')
     end
@@ -34,7 +34,7 @@ RSpec.describe 'Signing In', type: feature do
         find('[name=commit]').click
       end
 
-      visit '/tutorials'
+      visit '/sub_tutorials'
 
       expect(page).to have_content('Add a tutorial')
     end

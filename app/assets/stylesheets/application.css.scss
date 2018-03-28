@@ -12,6 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require ./landing_page_css/bootstrap-grid.css
+ *= require ./landing_page_css/bootstrap-grid.min.css
+ *= require ./landing_page_css/bootstrap-reboot.css
+ *= require ./landing_page_css/bootstrap-reboot.min.css
+
+ *= require ./landing_page_css/bootstrap.min.css
+ *= require ./landing_page_css/modern-business.css
  */
 
 @import "bootstrap";

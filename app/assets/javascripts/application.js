@@ -10,7 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require ./landing_page_js/bootstrap.bundle.js
+//= require ./landing_page_js/bootstrap.bundle.min.js
+//= require ./landing_page_js/bootstrap.min.js
+//= require ./landing_page_js/contact_me.js
+//= require ./landing_page_js/jqBootstrapValidation.js
+//= require ./landing_page_js/jquery.js
+//= require ./landing_page_js/jquery.min.js
+//= require ./landing_page_js/jquery.slim.js
+//= require ./landing_page_js/jquery.slim.min.js
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .

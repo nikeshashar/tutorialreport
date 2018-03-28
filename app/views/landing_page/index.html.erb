@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header"><%= @tut1.title %></h4>
+            <h4 class="card-header"><%= link_to @tut1.title, tutorial_path(@tut1) %></h4>
             <div class="card-body">
               <p class="card-text"><%= @tut1.description%></p>
             </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header"><%= @tut2.title %></h4>
+            <h4 class="card-header"><%= link_to @tut2.title, tutorial_path(@tut2) %></h4>
             <div class="card-body">
               <p class="card-text"><%= @tut2.description%></p>
             </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header"><%= @tut3.title %></h4>
+            <h4 class="card-header"><%= link_to @tut3.title, tutorial_path(@tut3)  %></h4>
             <div class="card-body">
               <p class="card-text"><%= @tut3.description%></p>
             </div>

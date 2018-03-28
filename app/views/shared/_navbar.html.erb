@@ -2,7 +2,7 @@
     <div class="navbar-collapse collapse w-100 dual-collapse2">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="navbar-brand mx-auto" href="#">Navbar 2</a>
+                <a class="navbar-brand mx-auto" href="/">TutorialReport</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -10,12 +10,20 @@
         </ul>
     </div>
     <div class="navbar-collapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" href="#">Right</a>
+              <% if user_signed_in? %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign In", new_user_session_path %></li>
+              <% end %>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+              <% if user_signed_in? %>
+                <li><%= link_to current_user.email, edit_user_registration_path %></li>
+              <% else %>
+                <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <% end %>
             </li>
         </ul>
     </div>

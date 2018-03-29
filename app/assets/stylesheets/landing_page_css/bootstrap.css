@@ -4476,6 +4476,7 @@ tbody.collapse.show {
 
 .card-text:last-child {
   margin-bottom: 0;
+  font-family:Arial;
 }
 
 .card-link:hover {

@@ -15,10 +15,30 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'devise'
 require_relative 'support/controller_helpers'
+require 'elasticsearch/extensions/test/cluster'
+require 'rake'
+require 'webmock/rspec'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+
+  config.before :each, elasticsearch: true do
+    unless Elasticsearch::Extensions::Test::Cluster.running?
+      Elasticsearch::Extensions::Test::Cluster.start(port: 9250,
+                                                     number_of_nodes: 1)
+    end
+  end
+
+  config.after :suite do
+    if Elasticsearch::Extensions::Test::Cluster.running?
+      Elasticsearch::Extensions::Test::Cluster.stop(port: 9250)
+    end
+  end
+
+  config.before(:all) do
+    WebMock.disable_net_connect! :allow_localhost => true
+  end
 
   config.include ControllerHelpers, type: :controller
   Warden.test_mode!

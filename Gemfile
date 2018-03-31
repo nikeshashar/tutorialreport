@@ -60,6 +60,8 @@ group :test do
     gem 'capybara'
     gem 'rails-controller-testing'
     gem 'simplecov', require: false
+    gem 'elasticsearch-extensions'
+    gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

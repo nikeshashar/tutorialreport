@@ -1,6 +1,15 @@
 <% if @tutorials.any? %>
   <% @tutorials.each do |t| %>
-     <h2><%= link_to "#{t.title}", tutorial_path(t.id) %><h2>
+      <br><div class="container" style="padding: 10em inherit; background-color:#66ff66"></br>
+         <div class="card">
+           <h5 class="card-header"></h5>
+           <div class="card-body">
+             <h5 class="card-title"><%= link_to "#{t.title}", tutorial_path(t.id), style: "color:white;" %></h5>
+             <p class="card-text"><%= "#{t.description}"%></p>
+             <a href="#" class="btn btn-primary">Take me there!</a>
+           </div>
+         </div>
+       </div>
   <% end %>
 <% else %>
   <h1><%= 'There are currently no tutorials' %></h1>

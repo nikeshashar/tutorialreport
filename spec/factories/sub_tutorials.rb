@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :tutorial do
+  factory :sub_tutorial do
     title 'Code Academy'
     description 'The go to tutorial'
     link 'https://www.codecademy.com/'

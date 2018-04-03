@@ -3,19 +3,19 @@ require 'rails_helper'
 RSpec.describe 'Correct links', type: feature do
   let(:user) { create(:user, :standard_user) }
   let(:admin) { create(:user, :admin) }
-  let!(:tutorial) { create(:tutorial) }
+  let!(:sub_tutorial) { create(:sub_tutorial) }
 
   describe 'when at root' do
-    it 'shows tutorial link' do
+    it 'shows sub_tutorial link' do
       visit '/'
 
-      find(:xpath, "//a[@href='/tutorials']").click
+      find(:xpath, "//a[@href='/sub_tutorials']").click
 
-      expect(page).to have_current_path('/tutorials')
+      expect(page).to have_current_path('/sub_tutorials')
     end
   end
 
-  describe 'when tutorial index as admin' do
+  describe 'when sub_tutorial index as admin' do
     it 'shows add, edit and delete links' do
       visit '/'
 
@@ -27,17 +27,17 @@ RSpec.describe 'Correct links', type: feature do
         find('[name=commit]').click
       end
 
-      visit '/tutorials'
+      visit '/sub_tutorials'
       expect(page).to have_text('Add a tutorial')
 
-      find(:xpath, "//a[@href='/tutorials/#{tutorial.id}']").click
+      find(:xpath, "//a[@href='/sub_tutorials/#{sub_tutorial.id}']").click
 
       expect(page).to have_text('Edit this tutorial')
       expect(page).to have_text('Delete this tutorial')
     end
   end
 
-  describe 'when tutorial index as user' do
+  describe 'when sub_tutorial index as user' do
     it 'doesnt show add, edit and delete links' do
       visit '/'
 
@@ -49,13 +49,13 @@ RSpec.describe 'Correct links', type: feature do
         find('[name=commit]').click
       end
 
-      visit '/tutorials'
-      expect(page).not_to have_text('Add a tutorial')
+      visit '/sub_tutorials'
+      expect(page).not_to have_text('Add a sub_tutorial')
 
-      find(:xpath, "//a[@href='/tutorials/#{tutorial.id}']").click
+      find(:xpath, "//a[@href='/sub_tutorials/#{sub_tutorial.id}']").click
 
-      expect(page).not_to have_text('Edit this tutorial')
-      expect(page).not_to have_text('Delete this tutorial')
+      expect(page).not_to have_text('Edit this sub_tutorial')
+      expect(page).not_to have_text('Delete this sub_tutorial')
     end
   end
 end

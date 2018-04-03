@@ -10,21 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312130307) do
+ActiveRecord::Schema.define(version: 20180326085935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "tutorials", force: :cascade do |t|
+  create_table "sub_tutorials", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "link"
     t.integer  "rating"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "suitability"
     t.string   "type_of_tutorial"
     t.string   "language"
+    t.integer  "tutorial_academy_id"
+    t.index ["tutorial_academy_id"], name: "index_sub_tutorials_on_tutorial_academy_id", using: :btree
+  end
+
+  create_table "tutorial_academies", force: :cascade do |t|
+    t.string  "title"
+    t.text    "description"
+    t.string  "link"
+    t.integer "average_score"
   end
 
   create_table "users", force: :cascade do |t|

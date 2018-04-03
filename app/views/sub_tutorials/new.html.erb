@@ -1,4 +1,4 @@
-<%= form_for @tutorial do |f| %>
+<%= form_for @sub_tutorial do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :link %>
@@ -13,3 +13,4 @@
   <%= f.text_field :type_of_tutorial %>
   <%= f.submit %>
 <% end %>
+<%= link_to 'Cancel', sub_tutorials_path %>

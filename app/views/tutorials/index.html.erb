@@ -1,6 +1,6 @@
 <% if @tutorials.any? %>
   <% @tutorials.each do |t| %>
-      <br><div class="container" style="padding: 10em inherit; background-color:#66ff66"></br>
+      <br><div class="container" style="padding: 10em inherit;"></br>
          <div class="card">
            <h3 class="card-header"><%= link_to "#{t.title}", tutorial_path(t.id), style: "color:#008ae6;" %></h3>
            <div class="card-body">

@@ -1,0 +1,9 @@
+<ul>
+  <% @tutorials.each do |tutorial| %>
+    <li>
+      <h3>
+        <%= link_to tutorial.title, controller: "tutorials", action: "show", id: tutorial._id%>
+      </h3>
+    </li>
+  <% end %>
+</ul>

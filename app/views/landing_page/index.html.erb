@@ -1,3 +1,67 @@
-<h1><%= @welcome %></h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<br><%= link_to "All Tutorials", tutorials_path %></br>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/stylesheets/landing_page_css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/stylesheets/landing_page_css/modern-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header>
+      <div class="carousel-item active" style="background-image: url('http://assets3.bigthink.com/system/idea_thumbnails/60118/size_1024/computer_code.jpg?1448159143')">
+      </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header"><%= link_to @tut1.title, tutorial_path(@tut1) %></h4>
+            <div class="card-body">
+              <p class="card-text"><%= @tut1.description%></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header"><%= link_to @tut2.title, tutorial_path(@tut2) %></h4>
+            <div class="card-body">
+              <p class="card-text"><%= @tut2.description%></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header"><%= link_to @tut3.title, tutorial_path(@tut3)  %></h4>
+            <div class="card-body">
+              <p class="card-text"><%= @tut3.description%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" style="margin-top:40px;">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  </body>
+</html>

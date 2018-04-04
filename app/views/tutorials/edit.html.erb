@@ -1,15 +1,47 @@
-<%= form_for @tutorial do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :link %>
-  <%= f.text_field :link %>
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
-  <%= f.label :language %>
-  <%= f.text_field :language %>
-  <%= f.label :suitability %>
-  <%= f.text_field :suitability %>
-  <%= f.label :type_of_tutorial %>
-  <%= f.text_field :type_of_tutorial %>
-  <%= f.submit %>
-<% end %>
+<div class="jumbotron-fluid" style="background-color:#008ae6; margin-top:0px;">
+  <div class="container">
+    <div class="form-edit-tutorial">
+      <h2 class="form-edit-profile-heading" style="color:white;">Change that tutorial!</h2>
+        <%= form_for @tutorial,  html: {class: "form-edit-profile"} do |f|%>
+          <div>
+            <p style="color:white;">Title</p>
+            <%= f.label :title, class: 'sr-only' %>
+            <%= f.text_field :title %>
+          </div>
+
+          <div>
+            <p style="color:white;">Website</p>
+            <%= f.label :link, class: 'sr-only' %>
+            <%= f.text_field :link %>
+          </div>
+
+          <div>
+            <p style="color:white;">Rating</p>
+            <%= f.label :rating, class: 'sr-only' %>
+            <%= f.text_field :rating %>
+          </div>
+
+          <div>
+            <p style="color:white;">Language</p>
+            <%= f.label :language, class: 'sr-only' %>
+            <%= f.text_field :language %>
+          </div>
+
+          <div>
+            <p style="color:white;">Proficiency level</p>
+            <%= f.label :suitability, class: 'sr-only' %>
+            <%= f.text_field :suitability %>
+          </div>
+
+          <div>
+            <p style="color:white;">Type of tutorial</p>
+            <%= f.label :type_of_tutorial, class: 'sr-only' %>
+            <%= f.text_field :type_of_tutorial %>
+          </div>
+
+
+          <%= f.submit %>
+        <% end %>
+    </div>
+  </div>
+</div>

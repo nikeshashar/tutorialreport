@@ -1,13 +1,27 @@
 <% if @tutorials.any? %>
   <% @tutorials.each do |t| %>
-     <h2><%= link_to "#{t.title}", tutorial_path(t.id) %><h2>
+      <br><div class="container" style="padding: 10em inherit;"></br>
+         <div class="card">
+           <h3 class="card-header"><%= link_to "#{t.title}", tutorial_path(t.id), style: "color:#008ae6;" %></h3>
+           <div class="card-body">
+             <h5 class="card-title"></h5>
+             <p class="card-text" style="color:#008ae6;"><%= "#{t.description}"%></p>
+             <p class="card-text" style="color:#008ae6;"><%= "#{t.link}"%></p>
+             <p class="card-text" style="color:#008ae6;"><%= "#{t.rating}"%></p>
+            </div>
+         </div>
+       </div>
   <% end %>
 <% else %>
   <h1><%= 'There are currently no tutorials' %></h1>
 <% end %>
 
 <% if @is_admin %>
-  <br><%= link_to "Add a tutorial", new_tutorial_path(@tutorial) %></br>
+  <br><div class="container" style="padding: 10em inherit; background-color:#008ae6"></br>
+    <br><%= link_to "Add a tutorial", new_tutorial_path(@tutorial), style: "color:white;" %></br>
+  </div>
 <% end %>
 
-<br><%= link_to 'Return to landing page', root_path %></br>
+<br><div class="container" style="padding: 10em inherit; background-color:#ff3300"></br>
+  <br><%= link_to 'Return to landing page', root_path, style: "color:white;" %></br>
+</div>

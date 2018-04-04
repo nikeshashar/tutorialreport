@@ -1,26 +1,30 @@
-<h2>Log in</h2>
+<div class="jumbotron-fluid" style="background-color:#008ae6; margin-top:0px;">
+  <div class="container">
+    <div class="form-signin">
+      <h2 class="form-signin-heading" style="color:white;">Go on my son! Sign in!</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
+        <div>
+          <%= f.label :email, "Email Address", class: 'sr-only' %><br />
+          <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+        <div>
+          <%= f.label :password, class: 'sr-only' %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <% if devise_mapping.rememberable? -%>
+          <label style="color:white;">
+            <%= f.check_box :remember_me %>
+            <%= f.label "Do you want to be remembered?" %>
+          </label>
+        <% end -%>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <%= f.button t('.sign_in', default: 'Sign In'), class: 'btn btn-lg btn-primary btn-block', style: 'background-color:#92a8d1;' %>
+      <% end %>
+
+
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= render "users/shared/links" %>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

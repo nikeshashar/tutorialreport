@@ -1,25 +1,36 @@
 <% if @tutorial %>
-  <h2><br><%= @tutorial.title %></br></h2>
+  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; background-color:#008ae6; margin-bottom:0px; padding-bottom:10px;">
+    <div class="container">
+      <h2 class="display-4" style="color:white;"><%= @tutorial.title %></h2>
+    </div>
+  </div>
 
-  <%= 'Link' %>
-  <h5><br><%= @tutorial.link %></br></h5>
+  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
+    <div class="container">
+      <h3><%= 'Link' %></h3>
+      <h4><br><%= @tutorial.link %></br></h4>
 
-  <%= 'Average Rating' %>
-  <h5><br><%= @tutorial.rating %></br></h5>
+      <h3><%= 'Description' %></h3>
+      <h4><br><%= @tutorial.description %></br></h4>
 
-  <%= 'Tutorial Language' %>
-  <h5><br><%= @tutorial.language %></br></h5>
+      <h3><%= 'Average Rating' %></h3>
+      <h4><br><%= @tutorial.rating %></br></h4>
 
-  <%= 'Level' %>
-  <h5><br><%= @tutorial.suitability %></br></h5>
+      <h3><%= 'Tutorial Language' %></h3>
+      <h4><br><%= @tutorial.language %></br></h4>
 
-  <%= 'Tutorial Type' %>
-  <h5><br><%= @tutorial.type_of_tutorial %></br></h5>
+      <h3><%= 'Level' %></h3>
+      <h4><br><%= @tutorial.suitability %></br></h4>
+
+      <h3><%= 'Tutorial Type' %></h3>
+      <h4><br><%= @tutorial.type_of_tutorial %></br></h4>
+
+      <% if @is_admin %>
+        <br><%=link_to 'Edit this tutorial', edit_tutorial_path%></br>
+        <br><%=link_to 'Delete this tutorial', tutorial_path(@tutorial), method: :delete,  data: { confirm: 'Are you certain you want to delete this?' } %></br>
+      <% end %>
+
+      <br><%= link_to 'Return to the Tutorial list', tutorials_path %></br>
+    </div>
+  </div>
 <% end %>
-
-<% if @is_admin %>
-  <br><%=link_to 'Edit this tutorial', edit_tutorial_path%></br>
-  <br><%=link_to 'Delete this tutorial', tutorial_path(@tutorial), method: :delete,  data: { confirm: 'Are you certain you want to delete this?' } %></br>
-<% end %>
-
-<br><%= link_to 'Return to the Tutorial list', tutorials_path %></br>

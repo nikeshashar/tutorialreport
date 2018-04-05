@@ -13,32 +13,32 @@
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title" style="color:black;">JavaScript</h5>
-            <p class="card-text" style="color:black; font-size:15px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title" style="color:black;"><%= link_to @tutorials.first.title, "/tutorials/#{@tutorials.first.id}" %></h5>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.first.description%></p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title" style="color:black;">Ruby</h5>
-            <p class="card-text" style="color:black; font-size:15px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title" style="color:black;"><%= link_to @tutorials[1].title, "/tutorials/#{@tutorials[1].id}" %> </h5>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[1].description%></p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title" style="color:black">Java</h5>
-            <p class="card-text" style="color:black; font-size:15px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title" style="color:black"><%= link_to @tutorials[2].title, "/tutorials/#{@tutorials[2].id}" %>  </h5>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[2].description%></p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title" style="color:black">Java</h5>
-            <p class="card-text" style="color:black; font-size:15px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title" style="color:black"><%= link_to @tutorials.last.title, "/tutorials/#{@tutorials.last.id}" %> </h5>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.last.description%></p>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 class LandingPageController < ApplicationController
   def index
-    @welcome = "This is the Tutorial Report Landing Page"
+    @tutorials = Tutorial.all
   end
 end

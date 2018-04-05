@@ -29,7 +29,6 @@ class TutorialsController < ApplicationController
 
   def show
     @tutorial = Tutorial.find(params[:id])
-    @is_admin = current_user.admin? if current_user
   end
 
   def destroy

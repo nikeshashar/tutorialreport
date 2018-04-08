@@ -1,44 +1,64 @@
 <div class="jumbotron jumbotron-fluid" style="margin:0px;">
   <div class="container">
-    <h1 class="display-4" style="color:black;">Welcome</h1>
+    <h1 class="display-4" style="color:black; border-bottom-style:solid;">Welcome</h1>
     <p class="lead" style="color:black;">Looking for the <em>right</em> coding tutorial? You've come to the right place.</p>
     <p class="lead" style="color:black;">With hundreds tutorial listings which have all been reviewed and discussed by our community,</p>
     <p class="lead" style="color:black;">this is the perfect place to find out if <em>that</em> tutorial is <em>really</em> worth it.</p>
   </div>
-</div>
-<hr size="30" style="margin:2px; color:black;">
-<div class="jumbotron jumbotron-fluid" style="margin:0px;" >
-  <div class="container">
+  <div class="container" style="margin-top:50px;">
     <div class="row">
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <%= link_to @tutorials.first.title, "/tutorials\/#{@tutorials.first.id}"%>
+              </li>
+            </ul>
+          </div>
           <div class="card-body">
-            <h5 class="card-title" style="color:black;"><%= link_to @tutorials.first.title, "/tutorials/#{@tutorials.first.id}" %></h5>
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.first.description%></p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.first.description[0...50]%>...</p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <%= link_to @tutorials[1].title, "/tutorials\/#{@tutorials[1].id}"%>
+              </li>
+            </ul>
+          </div>
           <div class="card-body">
-            <h5 class="card-title" style="color:black;"><%= link_to @tutorials[1].title, "/tutorials/#{@tutorials[1].id}" %> </h5>
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[1].description%></p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[1].description[0...50]%>...</p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <%= link_to @tutorials[2].title, "/tutorials\/#{@tutorials[2].id}"%>
+              </li>
+            </ul>
+          </div>
           <div class="card-body">
-            <h5 class="card-title" style="color:black"><%= link_to @tutorials[2].title, "/tutorials/#{@tutorials[2].id}" %>  </h5>
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[2].description%></p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[2].description[0...50]%>...</p>
           </div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <%= link_to @tutorials.last.title, "/tutorials\/#{@tutorials.last.id}"%>
+              </li>
+          </div>
           <div class="card-body">
-            <h5 class="card-title" style="color:black"><%= link_to @tutorials.last.title, "/tutorials/#{@tutorials.last.id}" %> </h5>
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.last.description%></p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.last.description[0...50]%>...</p>
           </div>
         </div>
       </div>
@@ -58,8 +78,9 @@
       -ms-flex-direction: column;
       flex-direction: column;
       background-color: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.125);
+      border: 2px solid black;
       border-radius: 0.25rem;
+      min-height: 125px;
   }
 
   .card-block {
@@ -81,6 +102,9 @@
 
   .card-text:last-child {
       margin-bottom: 0;
+      margin-right: 1px;
+      margin-left: 3px;
+      min-height: 75px
   }
 
   .card-link:hover {
@@ -104,8 +128,10 @@
   .card-header {
       padding: 0.75rem 1.25rem;
       margin-bottom: 0;
-      background-color: #f7f7f9;
+      background-color: #eeeeee;
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      font-family: 'IBM Plex Mono', monospace;
+      min-height: 100px;
   }
 
   .card-header:first-child {

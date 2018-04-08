@@ -1,29 +1,31 @@
 <% if @tutorial %>
-  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; background-color:#008ae6; margin-bottom:0px; padding-bottom:10px;">
-    <div class="container">
-      <h2 class="display-4" style="color:white;"><%= @tutorial.title %></h2>
+  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
+    <div class="container" style="border-bottom-style:solid; border-width:5px;">
+      <h2 class="display-4"><%= @tutorial.title %></h2>
     </div>
+
   </div>
 
   <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
     <div class="container">
-      <h3><%= 'Link' %></h3>
-      <h4><br><%= @tutorial.link %></br></h4>
 
-      <h3><%= 'Description' %></h3>
-      <h4><br><%= @tutorial.description %></br></h4>
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Description' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.description %></br></h4>
 
-      <h3><%= 'Average Rating' %></h3>
-      <h4><br><%= @tutorial.rating %></br></h4>
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Link' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.link %></br></h4>
 
-      <h3><%= 'Tutorial Language' %></h3>
-      <h4><br><%= @tutorial.language %></br></h4>
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Average Rating' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.rating %></br></h4>
 
-      <h3><%= 'Level' %></h3>
-      <h4><br><%= @tutorial.suitability %></br></h4>
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Tutorial Language' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.language %></br></h4>
 
-      <h3><%= 'Tutorial Type' %></h3>
-      <h4><br><%= @tutorial.type_of_tutorial %></br></h4>
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Level' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.suitability %></br></h4>
+
+      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Tutorial Type' %></h3>
+      <h4 style="margin-bottom:50px;"><br><%= @tutorial.type_of_tutorial %></br></h4>
     </div>
   </div>
 <% end %>

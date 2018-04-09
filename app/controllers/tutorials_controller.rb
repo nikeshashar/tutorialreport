@@ -29,6 +29,7 @@ class TutorialsController < ApplicationController
 
   def show
     @tutorial = Tutorial.find(params[:id])
+    @reviews = Review.where(tutorial_id: params[:id])
   end
 
   def destroy

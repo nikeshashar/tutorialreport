@@ -29,3 +29,9 @@
     </div>
   </div>
 <% end %>
+
+<% if @reviews.any? %>
+  <% @reviews.each do |r| %>
+    <%= r.description %>
+  <% end %>
+<% end %>

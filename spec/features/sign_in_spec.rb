@@ -5,6 +5,7 @@ RSpec.describe 'Signing In', type: feature do
 
   describe 'The signing in process' do
     it 'signs the user in' do
+      skip
       visit '/'
 
       find(:xpath, "//a[@href='/users/sign_in']").click

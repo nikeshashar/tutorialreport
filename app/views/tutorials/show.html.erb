@@ -32,6 +32,9 @@
 
 <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
   <div class="container">
+    <div>
+      <%= link_to 'Leave a review!', '/reviews/new' %>
+    </div>
     <h2 class="display-4" style="border-bottom-style:solid; border-width:5px; margin-bottom:20px;"><%= "User Reviews" %></h2>
     <% if @reviews.any? %>
       <% @reviews.each do |r| %>

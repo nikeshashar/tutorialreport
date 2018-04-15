@@ -1,18 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe 'Correct links', type: feature do
-  let(:user) { create(:user, :standard_user) }
-  let(:admin) { create(:user, :admin) }
-  let!(:tutorial) { create(:tutorial) }
+  # # let(:user) { create(:user, :standard_user) }
+  # let(:admin) { create(:user, :admin) }
+  let!(:tutorial) { create(:tutorial, id: 1) }
+  let!(:second_tutorial) { create(:tutorial, id: 2) }
+  let!(:third_tutorial) { create(:tutorial, id: 3) }
+  let!(:fourth_tutorial) { create(:tutorial, id: 4) }
+  let!(:fifth_tutorial) { create(:tutorial, id: 5) }
+
+  describe 'when at root' do
+    it 'shows four tutorials' do
+      visit '/'
+
+      expect(page).to have_xpath("//a[@href='/tutorials/1']")
+      expect(page).to have_xpath("//a[@href='/tutorials/2']")
+      expect(page).to have_xpath("//a[@href='/tutorials/3']")
+      expect(page).to have_xpath("//a[@href='/tutorials/5']")
+    end
+  end
 
   describe 'when at root' do
     it 'shows tutorial link' do
-      skip
       visit '/'
+      find(:xpath, "//a[@href='/tutorials/1']").click
 
-      find(:xpath, "//a[@href='/tutorials']").click
-
-      expect(page).to have_current_path('/tutorials')
+      expect(page).to have_current_path('/tutorials/1')
     end
   end
 

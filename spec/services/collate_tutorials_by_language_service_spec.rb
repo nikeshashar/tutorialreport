@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe CollateTutorialsByLanguageService do
-  subject { CollateTutorialsByLanguageService.new(tutorial) }
+  let(:ruby_service) { CollateTutorialsByLanguageService.new(ruby_tutorial) }
+  let(:python_service) { CollateTutorialsByLanguageService.new(python_tutorial) }
 
-  let!(:tutorial) { create(:tutorial, language: 'ruby') }
+  let!(:ruby_tutorial) { create(:tutorial, language: 'ruby') }
+  let!(:python_tutorial) { create(:tutorial, language: 'python') }
   let!(:second_tutorial) { create(:tutorial, language: 'javascript') }
   let!(:third_tutorial) { create(:tutorial, language: 'ruby') }
   let!(:fourth_tutorial) { create(:tutorial, language: 'ruby') }
@@ -14,11 +16,15 @@ RSpec.describe CollateTutorialsByLanguageService do
 
   context 'when the service is called' do
     it 'returns four ruby tutorials' do
-      expect(subject.call).to eq  Hash['first' => third_tutorial,
+      expect(ruby_service.call).to eq  Hash['first' => third_tutorial,
                                    'second' => fourth_tutorial,
                                    'third' => sixth_tutorial,
                                    'fourth'=> eigth_tutorial]
     end
-  end
 
+    it 'returns two python tutorials with no nils' do
+      expect(python_service.call).to eq Hash['first' => fifth_tutorial,
+                                      'second' => seventh_tutorial]
+    end
+  end
 end

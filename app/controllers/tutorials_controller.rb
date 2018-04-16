@@ -29,6 +29,7 @@ class TutorialsController < ApplicationController
 
   def show
     @tutorial = Tutorial.find(params[:id])
+    @tutorials = Tutorial.all
   end
 
   def destroy
@@ -44,6 +45,7 @@ class TutorialsController < ApplicationController
                                      :rating,
                                      :language,
                                      :suitability,
-                                     :type_of_tutorial)
+                                     :type_of_tutorial,
+                                     :avatar)
   end
 end

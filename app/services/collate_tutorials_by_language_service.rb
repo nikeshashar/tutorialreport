@@ -1,6 +1,6 @@
 class CollateTutorialsByLanguageService
   def initialize(target_tutorial)
-    @target_language = target_tutorial.language
+    @target_tutorial = target_tutorial
   end
 
   def call
@@ -10,7 +10,7 @@ class CollateTutorialsByLanguageService
   private
 
   def collated_tutorials
-    Tutorial.where(language: @target_language)
+    Tutorial.where(language: @target_tutorial.language).where('id != ?', @target_tutorial.id).order(:id)
   end
 
   def parse_tutorials

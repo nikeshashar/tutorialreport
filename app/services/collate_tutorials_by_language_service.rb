@@ -4,7 +4,7 @@ class CollateTutorialsByLanguageService
   end
 
   def call
-    parse_tutorials
+    delete_nil
   end
 
   private
@@ -14,10 +14,13 @@ class CollateTutorialsByLanguageService
   end
 
   def parse_tutorials
-    tutorials = collated_tutorials
-    Hash["first", tutorials.first,
-         "second", tutorials[1],
-         "third", tutorials[2],
-         "fourth", tutorials[3]]
+    Hash["first", collated_tutorials.first,
+         "second", collated_tutorials[1],
+         "third", collated_tutorials[2],
+         "fourth", collated_tutorials[3]]
+  end
+
+  def delete_nil
+    parse_tutorials.delete_if { |k,v| v.nil? }
   end
 end

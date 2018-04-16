@@ -27,84 +27,24 @@
         </div>
 
       </div>
-      <!-- /.row -->
 
-      <!-- Related Projects Row -->
       <h3 class="my-4">Related Tutorials</h3>
 
       <div class="row">
-
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="/tutorials/3">
-            <img class="img-fluid img-responsive"><%= image_tag @tutorials[1].avatar, size: "200x125" %></img>
-          </a>
+          <%= link_to image_tag(@tutorials["first"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["first"].id}"%>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="/tutorials/4">
-            <img class="img-fluid img-responsive"><%= image_tag @tutorials[2].avatar, size: "200x125" %></img>
-          </a>
+          <%= link_to image_tag(@tutorials["second"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["second"].id}"%>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="/tutorials/5">
-            <img class="img-fluid img-responsive"><%= image_tag @tutorials[3].avatar, size: "200x125" %></img>
-          </a>
+          <%= link_to image_tag(@tutorials["third"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["third"].id}"%>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="/tutorials/1">
-            <img class="img-fluid img-responsive"><%= image_tag @tutorials[4].avatar, size: "200x125" %></img>
-          </a>
+          <%= link_to image_tag(@tutorials["fourth"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["fourth"].id}"%>
         </div>
-
       </div>
-      <!-- /.row -->
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <% if @tutorial %>
-  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
-    <div class="container" style="border-bottom-style:solid; border-width:5px;">
-      <h2 class="display-4"><%= @tutorial.title %></h2>
-    </div>
-
-  </div>
-
-  <div class="jumbotron jumbotron-fluid" style="padding: 10em inherit; margin-bottom:0px; padding-bottom:10px;">
-    <div class="container">
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Description' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.description %></br></h4>
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Link' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.link %></br></h4>
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Average Rating' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.rating %></br></h4>
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Tutorial Language' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.language %></br></h4>
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Level' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.suitability %></br></h4>
-
-      <h3 style="border-bottom-style:solid; border-width:1px;"><%= 'Tutorial Type' %></h3>
-      <h4 style="margin-bottom:50px;"><br><%= @tutorial.type_of_tutorial %></br></h4>
-    </div>
-  </div>
-<% end %> -->

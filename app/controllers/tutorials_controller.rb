@@ -1,3 +1,5 @@
+require_relative "../services/CollateTutorialsByLanguageService.rb"
+
 class TutorialsController < ApplicationController
   before_action :authenticate_user!, except: [ :index, :show ]
 
@@ -29,7 +31,7 @@ class TutorialsController < ApplicationController
 
   def show
     @tutorial = Tutorial.find(params[:id])
-    @tutorials = Tutorial.all
+    @tutorials = CollateTutorialsByLanguageService.new(@tutorial).call
   end
 
   def destroy

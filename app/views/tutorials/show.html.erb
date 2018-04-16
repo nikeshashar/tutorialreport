@@ -31,20 +31,10 @@
       <h3 class="my-4">Related Tutorials</h3>
 
       <div class="row">
-        <div class="col-md-3 col-sm-6 mb-4">
-          <%= link_to image_tag(@tutorials["first"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["first"].id}"%>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <%= link_to image_tag(@tutorials["second"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["second"].id}"%>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <%= link_to image_tag(@tutorials["third"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["third"].id}"%>
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <%= link_to image_tag(@tutorials["fourth"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["fourth"].id}"%>
-        </div>
+        <% @tutorials.each do |key, value| %>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <%= link_to image_tag(@tutorials["#{key}"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["#{key}"].id}"%>
+          </div>
+        <% end %>
       </div>
     </div>

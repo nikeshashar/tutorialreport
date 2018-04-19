@@ -532,31 +532,28 @@
         1,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/services/collate_tutorials_by_language_service.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/services/collate_tutorials_for_landing_page_service.rb": [
         1,
-        1,
-        2,
-        null,
         null,
         1,
-        2,
+        1,
         null,
         null,
         1,
         null,
         1,
-        8,
+        4,
         null,
         null,
         1,
-        2,
+        12,
         null,
         null,
+        1,
         null,
         null,
         null,
         1,
-        10,
         null,
         null
       ],
@@ -572,6 +569,6 @@
         null
       ]
     },
-    "timestamp": 1523897192
+    "timestamp": 1524154822
   }
 }

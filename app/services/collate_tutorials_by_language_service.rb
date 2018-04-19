@@ -8,9 +8,9 @@ class CollateTutorialsByLanguageService
   end
 
   private
-
-  def collated_tutorials
-    Tutorial.where(language: @target_tutorial.language).where('id != ?', @target_tutorial.id).order(:id)
+  
+  def delete_nil
+    parse_tutorials.delete_if { |k,v| v.nil? }
   end
 
   def parse_tutorials
@@ -20,7 +20,7 @@ class CollateTutorialsByLanguageService
          "fourth", collated_tutorials[3]]
   end
 
-  def delete_nil
-    parse_tutorials.delete_if { |k,v| v.nil? }
+  def collated_tutorials
+    Tutorial.where(language: @target_tutorial.language).where('id != ?', @target_tutorial.id).order(:id)
   end
 end

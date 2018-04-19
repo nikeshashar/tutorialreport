@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-16T18:46:32+02:00">2018-04-16T18:46:32+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-19T18:20:22+02:00">2018-04-19T18:20:22+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.21
+         1.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>98</b> relevant lines. 
-    <span class="green"><b>98</b> lines covered</span> and
+    <b>96</b> relevant lines. 
+    <span class="green"><b>96</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -101,13 +101,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#1a5ddaaad8848db6d75067cd097062271656df6a" class="src_link" title="app/services/collate_tutorials_by_language_service.rb">app/services/collate_tutorials_by_language_service.rb</a></td>
+        <td class="strong"><a href="#d2878fcdc78137060c62f9717b798daeeb058d13" class="src_link" title="app/services/collate_tutorials_for_landing_page_service.rb">app/services/collate_tutorials_for_landing_page_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>12</td>
-        <td>12</td>
+        <td>23</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -489,13 +489,13 @@
 </div>
 
       
-        <div class="source_table" id="1a5ddaaad8848db6d75067cd097062271656df6a">
+        <div class="source_table" id="d2878fcdc78137060c62f9717b798daeeb058d13">
   <div class="header">
-    <h3>app/services/collate_tutorials_by_language_service.rb</h3>
+    <h3>app/services/collate_tutorials_for_landing_page_service.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -506,154 +506,136 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class CollateTutorialsByLanguageService</code>
+          <code class="ruby">class CollateTutorialsForLandingPageService</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(target_tutorial)</code>
+          <code class="ruby"> def call</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @target_tutorial = target_tutorial</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">   create_hash</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def call</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    delete_nil</code>
+          <code class="ruby"> private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby"> def tutorials</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
+          
+          <code class="ruby">   Tutorial.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">  def collated_tutorials</code>
+          <code class="ruby"> def top_tutorials</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="13">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="14">
+          <span class="hits">12</span>
           
-          <code class="ruby">    Tutorial.where(language: @target_tutorial.language).where(&#39;id != ?&#39;, @target_tutorial.id).order(:id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">   tutorials.map { |tutorial| tutorial if tutorial.rating &gt;= 7 }.compact</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
+          <code class="ruby"> end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  def parse_tutorials</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    Hash[&quot;first&quot;, collated_tutorials.first,</code>
+          <code class="ruby"> def create_hash</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">         &quot;second&quot;, collated_tutorials[1],</code>
+          <code class="ruby">   { first: top_tutorials[0],</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">         &quot;third&quot;, collated_tutorials[2],</code>
+          <code class="ruby">     second: top_tutorials[1],</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">         &quot;fourth&quot;, collated_tutorials[3]]</code>
+          <code class="ruby">     third: top_tutorials[2],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">     fourth: top_tutorials[3] }.compact</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"> end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def delete_nil</code>
-        </li>
-      
-        <li class="covered" data-hits="10" data-linenumber="24">
-          <span class="hits">10</span>
-          
-          <code class="ruby">    parse_tutorials.delete_if { |k,v| v.nil? }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>

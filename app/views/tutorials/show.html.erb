@@ -9,7 +9,7 @@
       <div class="row">
 
         <div class="col-md-8">
-          <img class="img-fluid img-responsive"><%= image_tag @tutorial.avatar, size: "600x400" %></img>
+          <img class="img-fluid img-responsive"><%= image_tag @tutorial.avatar_url, size: "600x400" %></img>
         </div>
 
         <div class="col-md-4">
@@ -33,7 +33,7 @@
       <div class="row">
         <% @tutorials.each do |key, value| %>
           <div class="col-md-3 col-sm-6 mb-4">
-            <%= link_to image_tag(@tutorials["#{key}"].avatar, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["#{key}"].id}"%>
+            <%= link_to image_tag(@tutorials["#{key}"].avatar_url, size: "200x125", class: "img-fluid img-responsive"), "/tutorials/#{@tutorials["#{key}"].id}"%>
           </div>
         <% end %>
       </div>

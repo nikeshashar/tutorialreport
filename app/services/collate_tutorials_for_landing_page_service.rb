@@ -11,7 +11,7 @@ class CollateTutorialsForLandingPageService
  end
 
  def top_tutorials
-   tutorials.map { |tutorial| tutorial if tutorial.rating >= 7 }.compact
+   tutorials.shuffle.map { |tutorial| tutorial if tutorial.rating >= 7 }.compact
  end
 
  def create_hash

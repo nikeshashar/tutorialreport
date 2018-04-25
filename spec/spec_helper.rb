@@ -13,7 +13,6 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'devise'
 require_relative 'support/controller_helpers'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -21,11 +20,6 @@ RSpec.configure do |config|
   # assertions if you prefer.
 
   config.include ControllerHelpers, type: :controller
-  Warden.test_mode!
-
-  config.after do
-    Warden.test_reset!
-  end
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`

@@ -10,14 +10,14 @@ class CollateTutorialsForLandingPageService
    Tutorial.all
  end
 
- def top_tutorials
+ def random_top_tutorials
    tutorials.shuffle.map { |tutorial| tutorial if tutorial.rating >= 7 }.compact
  end
 
  def create_hash
-   { first: top_tutorials[0],
-     second: top_tutorials[1],
-     third: top_tutorials[2],
-     fourth: top_tutorials[3] }.compact
+   { first: random_top_tutorials[0],
+     second: random_top_tutorials[1],
+     third: random_top_tutorials[2],
+     fourth: random_top_tutorials[3] }.compact
  end
 end

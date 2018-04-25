@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem "paperclip", "~> 6.0.0"
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

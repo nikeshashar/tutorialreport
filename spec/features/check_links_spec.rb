@@ -4,18 +4,19 @@ RSpec.describe 'Correct links', type: feature do
   # # let(:user) { create(:user, :standard_user) }
   # let(:admin) { create(:user, :admin) }
   let!(:tutorial) { create(:tutorial, id: 1) }
-  let!(:second_tutorial) { create(:tutorial, id: 2) }
+  let!(:second_tutorial) { create(:tutorial, id: 2, rating: 2) }
   let!(:third_tutorial) { create(:tutorial, id: 3) }
   let!(:fourth_tutorial) { create(:tutorial, id: 4) }
   let!(:fifth_tutorial) { create(:tutorial, id: 5) }
 
   describe 'when at root' do
-    it 'shows four tutorials' do
+    it 'shows four top-rated tutorials' do
       visit '/'
-
+      p tutorial, second_tutorial, third_tutorial, fourth_tutorial, fifth_tutorial
       expect(page).to have_xpath("//a[@href='/tutorials/1']")
-      expect(page).to have_xpath("//a[@href='/tutorials/2']")
+      expect(page).not_to have_xpath("//a[@href='/tutorials/2']")
       expect(page).to have_xpath("//a[@href='/tutorials/3']")
+      expect(page).to have_xpath("//a[@href='/tutorials/4']")
       expect(page).to have_xpath("//a[@href='/tutorials/5']")
     end
   end

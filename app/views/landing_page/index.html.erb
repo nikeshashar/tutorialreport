@@ -12,12 +12,12 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials.first.title, "/tutorials\/#{@tutorials.first.id}"%>
+                <%= link_to @tutorials[:first][:title], "/tutorials\/#{@tutorials[:first][:id]}"%>
               </li>
             </ul>
           </div>
           <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.first.description[0...50]%>...</p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[:first][:description][0...50]%>...</p>
           </div>
         </div>
       </div>
@@ -26,12 +26,12 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials[1].title, "/tutorials\/#{@tutorials[1].id}"%>
+                <%= link_to @tutorials[:second][:title], "/tutorials\/#{@tutorials[:second][:id]}"%>
               </li>
             </ul>
           </div>
           <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[1].description[0...50]%>...</p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[:second][:description][0...50]%>...</p>
           </div>
         </div>
       </div>
@@ -40,12 +40,12 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials[2].title, "/tutorials\/#{@tutorials[2].id}"%>
+                <%= link_to @tutorials[:third][:title], "/tutorials\/#{@tutorials[:third][:id]}"%>
               </li>
             </ul>
           </div>
           <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[2].description[0...50]%>...</p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[:third][:description][0...50]%>...</p>
           </div>
         </div>
       </div>
@@ -54,11 +54,11 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials.last.title, "/tutorials\/#{@tutorials.last.id}"%>
+                <%= link_to @tutorials[:fourth][:title], "/tutorials\/#{@tutorials[:fourth][:id]}"%>
               </li>
           </div>
           <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.last.description[0...50]%>...</p>
+            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[:fourth][:description][0...50]%>...</p>
           </div>
         </div>
       </div>

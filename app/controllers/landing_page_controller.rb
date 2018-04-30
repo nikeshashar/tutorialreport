@@ -1,5 +1,5 @@
 class LandingPageController < ApplicationController
   def index
-    @tutorials = Tutorial.all
+     @tutorials = CollateTutorialsForLandingPageService.new.call
   end
 end

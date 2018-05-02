@@ -16,7 +16,7 @@ RSpec.describe 'Correct links', type: feature do
       expect(page).to have_xpath("//a[@href='/tutorials/1']")
       expect(page).to have_xpath("//a[@href='/tutorials/2']")
       expect(page).to have_xpath("//a[@href='/tutorials/3']")
-      expect(page).to have_xpath("//a[@href='/tutorials/5']")
+      expect(page).to have_xpath("//a[@href='/tutorials/4']")
     end
   end
 

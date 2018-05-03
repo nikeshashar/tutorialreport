@@ -30,6 +30,7 @@ class TutorialsController < ApplicationController
   def show
     @tutorial = Tutorial.find(params[:id])
     @tutorials = CollateTutorialsByLanguageService.new(@tutorial).call
+    @rating = CollateRatingsPerTutorialService.new(@tutorial.id).call
   end
 
   def destroy

@@ -29,6 +29,7 @@ class TutorialsController < ApplicationController
 
   def show
     @tutorial = Tutorial.find(params[:id])
+    session[:passed_tutorial_id] = @tutorial.id
     @tutorials = CollateTutorialsByLanguageService.new(@tutorial).call
     @rating = CollateRatingsPerTutorialService.new(@tutorial.id).call
   end

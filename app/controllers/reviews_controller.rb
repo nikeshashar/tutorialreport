@@ -1,7 +1,7 @@
 class ReviewsController <ApplicationController
+  # To be implemented here :authenticate
   def new
     @review = Review.new
-    puts "This IS DA TING YO #{@review}"
   end
 
   def create
@@ -14,8 +14,6 @@ class ReviewsController <ApplicationController
   private
 
   def reviews_params
-    params.require(:review).permit(:description)
+    params.require(:review).permit(:rating)
   end
-
-
 end

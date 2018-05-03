@@ -207,34 +207,94 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/factories/tutorials.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/factories/users.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/config/routes.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/helpers/landing_page_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/helpers/tutorials_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/spec/support/factory_bot.rb": [
+        1,
+        1,
         null
       ],
       "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/services/collate_ratings_per_tutorial_service.rb": [
         1,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        0,
+        6,
+        2,
         null,
         null
       ],
-      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/models/review.rb": [
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/models/tutorial.rb": [
+        1,
+        1,
+        null,
+        1,
         1,
         null
       ],
@@ -242,8 +302,12 @@
         1,
         1,
         null
+      ],
+      "/Users/thomaswilliampage/Documents/projects/tutorialreport/tutorial_report/app/models/review.rb": [
+        1,
+        null
       ]
     },
-    "timestamp": 1525293455
+    "timestamp": 1525350071
   }
 }

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Signing In', type: feature do
-  let!(:user) { create(:user, :standard_user) }
+  # let!(:user) { create(:user, :standard_user) }
 
   describe 'The signing in process' do
     it 'signs the user in' do

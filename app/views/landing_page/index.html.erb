@@ -13,31 +13,31 @@
           <tr>
             <th class="tl tl2"></th>
             <th class="qbse">
-              Self-Employed & Freelance
+              <%=@tutorials.first.language%>
             </th>
             <th class="qbse">
-              Small
+              <%=@tutorials[1].language%>
             </th>
             <th class="qbse">
-              Small
+              <%=@tutorials[2].language%>
             </th>
             <th class="qbse">
-              Small
+              <%=@tutorials.last.language%>
             </th>
           </tr>
           <tr>
             <th class="tl"></th>
             <th class="compare-heading">
-              Self-Employed
+              <%=@tutorials.first.title%>
             </th>
             <th class="compare-heading">
-              Simple Start
+              <%=@tutorials[1].title%>
             </th>
             <th class="compare-heading">
-              Essentials
+              <%=@tutorials[2].title%>
             </th>
             <th class="compare-heading">
-              Plus
+              <%=@tutorials.last.title%>
             </th>
           </tr>
           <tr>
@@ -159,15 +159,12 @@
   font-weight:bold !important;
   border-bottom:0 !important;
   padding-top:10px !important;
+  padding-left:10px !important;
 }
 
 .comparison tbody tr:nth-child(odd) {
   display:none;
 }
-
-/* .comparison .compare-row {
-  background:#F5F5F5;
-} */
 
 .comparison th {
   font-weight:normal;

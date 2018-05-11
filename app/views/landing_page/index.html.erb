@@ -12,7 +12,7 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials.first.title, "/tutorials\/#{@tutorials.first.id}"%>
+                <%= link_to @tutorials.first.title, "#{@tutorials.first.link}"%>
               </li>
             </ul>
           </div>
@@ -26,7 +26,7 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials[1].title, "/tutorials\/#{@tutorials[1].id}"%>
+                <%= link_to @tutorials[1].title, "#{@tutorials[1].link}"%>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials[2].title, "/tutorials\/#{@tutorials[2].id}"%>
+                <%= link_to @tutorials[2].title, "#{@tutorials[2].link}"%>
               </li>
             </ul>
           </div>
@@ -54,7 +54,7 @@
           <div class="card-header">
             <ul class="nav nav-pills card-header-pills">
               <li class="nav-item">
-                <%= link_to @tutorials.last.title, "/tutorials\/#{@tutorials.last.id}"%>
+                <%= link_to @tutorials.last.title, "#{@tutorials.last.link}"%>
               </li>
           </div>
           <div class="card-body">

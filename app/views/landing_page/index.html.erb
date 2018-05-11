@@ -1,397 +1,72 @@
-<div class="jumbotron jumbotron-fluid" style="margin:0px;">
-  <div class="container">
-    <h1 class="display-4" style="color:black; border-bottom-style:solid;">Welcome</h1>
-    <p class="lead" style="color:black;">Looking for the <em>right</em> coding tutorial? You've come to the right place.</p>
-    <p class="lead" style="color:black;">With hundreds tutorial listings which have all been reviewed and discussed by our community,</p>
-    <p class="lead" style="color:black;">this is the perfect place to find out if <em>that</em> tutorial is <em>really</em> worth it.</p>
-  </div>
-  <div class="container" style="margin-top:50px;">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <%= link_to @tutorials.first.title, "#{@tutorials.first.link}"%>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.first.description[0...50]%>...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <%= link_to @tutorials[1].title, "#{@tutorials[1].link}"%>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[1].description[0...50]%>...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <%= link_to @tutorials[2].title, "#{@tutorials[2].link}"%>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials[2].description[0...50]%>...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <%= link_to @tutorials.last.title, "#{@tutorials.last.link}"%>
-              </li>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="color:black; font-size:15px;"><%= @tutorials.last.description[0...50]%>...</p>
-          </div>
-        </div>
+<section class="wow slideInLeft" style="visibility: visible;">
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
-  </div>
-</div>
+  </header>
+</section>
+
 <style>
-  .card {
-      position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      background-color: #fff;
-      border: 2px solid black;
-      border-radius: 0.25rem;
-      min-height: 125px;
-  }
+    header.masthead {
+      text-align: center;
+      color: white;
+      background-image: url("http://cmzone.vzbqbxhynotw9ion96xv.netdna-cdn.com/wp-content/uploads/2017/12/Barbara-Custom-Motorcycles-Triumph-E-Black-Matter.jpg");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
 
-  .card-block {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-      padding: 1.25rem;
-  }
+    header.masthead .intro-text {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
 
-  .card-title {
-      margin-bottom: 0.75rem;
-  }
+    header.masthead .intro-text .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
-  .card-subtitle {
-      margin-top: -0.375rem;
-      margin-bottom: 0;
-  }
+    header.masthead .intro-text .intro-heading {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 25px;
+      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
-  .card-text:last-child {
-      margin-bottom: 0;
-      margin-right: 1px;
-      margin-left: 3px;
-      min-height: 75px
-  }
-
-  .card-link:hover {
-      text-decoration: none;
-  }
-
-  .card-link + .card-link {
-      margin-left: 1.25rem;
-  }
-
-  .card > .list-group:first-child .list-group-item:first-child {
-      border-top-right-radius: 0.25rem;
-      border-top-left-radius: 0.25rem;
-  }
-
-  .card > .list-group:last-child .list-group-item:last-child {
-      border-bottom-right-radius: 0.25rem;
-      border-bottom-left-radius: 0.25rem;
-  }
-
-  .card-header {
-      padding: 0.75rem 1.25rem;
-      margin-bottom: 0;
-      background-color: #eeeeee;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-      font-family: 'IBM Plex Mono', monospace;
-      min-height: 100px;
-  }
-
-  .card-header:first-child {
-      border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-  }
-
-  .card-footer {
-      padding: 0.75rem 1.25rem;
-      background-color: #f7f7f9;
-      border-top: 1px solid rgba(0, 0, 0, 0.125);
-  }
-
-  .card-footer:last-child {
-      border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
-  }
-
-  .card-header-tabs {
-      margin-right: -0.625rem;
-      margin-bottom: -0.75rem;
-      margin-left: -0.625rem;
-      border-bottom: 0;
-  }
-
-  .card-header-pills {
-      margin-right: -0.625rem;
-      margin-left: -0.625rem;
-  }
-
-  .card-primary {
-      background-color: #0275d8;
-      border-color: #0275d8;
-  }
-
-  .card-primary .card-header,
-  .card-primary .card-footer {
-      background-color: transparent;
-  }
-
-  .card-success {
-      background-color: #5cb85c;
-      border-color: #5cb85c;
-  }
-
-  .card-success .card-header,
-  .card-success .card-footer {
-      background-color: transparent;
-  }
-
-  .card-info {
-      background-color: #5bc0de;
-      border-color: #5bc0de;
-  }
-
-  .card-info .card-header,
-  .card-info .card-footer {
-      background-color: transparent;
-  }
-
-  .card-warning {
-      background-color: #f0ad4e;
-      border-color: #f0ad4e;
-  }
-
-  .card-warning .card-header,
-  .card-warning .card-footer {
-      background-color: transparent;
-  }
-
-  .card-danger {
-      background-color: #d9534f;
-      border-color: #d9534f;
-  }
-
-  .card-danger .card-header,
-  .card-danger .card-footer {
-      background-color: transparent;
-  }
-
-  .card-outline-primary {
-      background-color: transparent;
-      border-color: #0275d8;
-  }
-
-  .card-outline-secondary {
-      background-color: transparent;
-      border-color: #ccc;
-  }
-
-  .card-outline-info {
-      background-color: transparent;
-      border-color: #5bc0de;
-  }
-
-  .card-outline-success {
-      background-color: transparent;
-      border-color: #5cb85c;
-  }
-
-  .card-outline-warning {
-      background-color: transparent;
-      border-color: #f0ad4e;
-  }
-
-  .card-outline-danger {
-      background-color: transparent;
-      border-color: #d9534f;
-  }
-
-  .card-inverse {
-      color: rgba(255, 255, 255, 0.65);
-  }
-
-  .card-inverse .card-header,
-  .card-inverse .card-footer {
-      background-color: transparent;
-      border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .card-inverse .card-header,
-  .card-inverse .card-footer,
-  .card-inverse .card-title,
-  .card-inverse .card-blockquote {
-      color: #fff;
-  }
-
-  .card-inverse .card-link,
-  .card-inverse .card-text,
-  .card-inverse .card-subtitle,
-  .card-inverse .card-blockquote .blockquote-footer {
-      color: rgba(255, 255, 255, 0.65);
-  }
-
-  .card-inverse .card-link:focus, .card-inverse .card-link:hover {
-      color: #fff;
-  }
-
-  .card-blockquote {
-      padding: 0;
-      margin-bottom: 0;
-      border-left: 0;
-  }
-
-  .card-img {
-      border-radius: calc(0.25rem - 1px);
-  }
-
-  .card-img-overlay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 1.25rem;
-  }
-
-  .card-img-top {
-      border-top-right-radius: calc(0.25rem - 1px);
-      border-top-left-radius: calc(0.25rem - 1px);
-  }
-
-  .card-img-bottom {
-      border-bottom-right-radius: calc(0.25rem - 1px);
-      border-bottom-left-radius: calc(0.25rem - 1px);
-  }
-
-  @media (min-width: 576px) {
-      .card-deck {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+    @media (min-width: 768px) {
+      header.masthead .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
       }
-      .card-deck .card {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-flex: 1;
-          -webkit-flex: 1 0 0%;
-          -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
+      header.masthead .intro-text .intro-lead-in {
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+        margin-bottom: 25px;
+        font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
-      .card-deck .card:not(:first-child) {
-          margin-left: 15px;
+      header.masthead .intro-text .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        margin-bottom: 50px;
+        font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
-      .card-deck .card:not(:last-child) {
-          margin-right: 15px;
-      }
-  }
 
-  @media (min-width: 576px) {
-      .card-group {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      header.wow {
+        visibility: visible;
       }
-      .card-group .card {
-          -webkit-box-flex: 1;
-          -webkit-flex: 1 0 0%;
-          -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-      }
-      .card-group .card + .card {
-          margin-left: 0;
-          border-left: 0;
-      }
-      .card-group .card:first-child {
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
-      }
-      .card-group .card:first-child .card-img-top {
-          border-top-right-radius: 0;
-      }
-      .card-group .card:first-child .card-img-bottom {
-          border-bottom-right-radius: 0;
-      }
-      .card-group .card:last-child {
-          border-bottom-left-radius: 0;
-          border-top-left-radius: 0;
-      }
-      .card-group .card:last-child .card-img-top {
-          border-top-left-radius: 0;
-      }
-      .card-group .card:last-child .card-img-bottom {
-          border-bottom-left-radius: 0;
-      }
-      .card-group .card:not(:first-child):not(:last-child) {
-          border-radius: 0;
-      }
-      .card-group .card:not(:first-child):not(:last-child) .card-img-top,
-      .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
-          border-radius: 0;
-      }
-  }
-
-  @media (min-width: 576px) {
-      .card-columns {
-          -webkit-column-count: 3;
-          -moz-column-count: 3;
-          column-count: 3;
-          -webkit-column-gap: 1.25rem;
-          -moz-column-gap: 1.25rem;
-          column-gap: 1.25rem;
-      }
-      .card-columns .card {
-          display: inline-block;
-          width: 100%;
-          margin-bottom: 0.75rem;
-      }
-  }
-</style>
+    }
+  </style>

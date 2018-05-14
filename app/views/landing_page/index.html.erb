@@ -5,10 +5,10 @@
       </div>
   </header>
 
-  <section class="wow slideInLeft" style="visibility: visible; background-color:grey;" id="services">
+  <section class="wow slideInLeft" style="visibility: visible; background:#8693AB;" id="services">
     <div style="overflow-x:auto;">
     <div class="comparison">
-      <table >
+      <table style="background:#8693AB;">
         <thead>
           <tr>
             <th class="tl tl2"></th>
@@ -45,25 +45,29 @@
             <th class="price-info">
               <div class="free"><%=@tutorials.first.free?%></div>
               <div class="suitability"><%=@tutorials.first.suitability%></div>
-              <div class="description"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description1"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description2"><%=@tutorials.first.description[0...100]%></div>
               <div class="link"><%= link_to "Take me there!", @tutorials.first.link, {:style=>'color:#FFFFFF;'}%></div>
             </th>
             <th class="price-info">
               <div class="free"><%=@tutorials[1].free?%></div>
               <div class="suitability"><%=@tutorials[1].suitability%></div>
-              <div class="description"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description1"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description2"><%=@tutorials.first.description[0...100]%></div>
               <div class="link"><%= link_to "Take me there!", @tutorials[1].link, {:style=>'color:#FFFFFF;'}%></div>
             </th>
             <th class="price-info">
               <div class="free"><%=@tutorials[2].free?%></div>
               <div class="suitability"><%=@tutorials[2].suitability%></div>
-              <div class="description"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description1"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description2"><%=@tutorials.first.description[0...100]%></div>
               <div class="link"><%= link_to "Take me there!", @tutorials[2].link, {:style=>'color:#FFFFFF;'}%></div>
             </th>
             <th class="price-info">
               <div class="free"><%=@tutorials.last.free?%></div>
               <div class="suitability"><%=@tutorials.last.suitability%></div>
-              <div class="description"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description1"><%=@tutorials.first.description[0...100]%></div>
+              <div class="description2"><%=@tutorials.first.description[0...100]%></div>
               <div class="link"><%= link_to "Take me there!", @tutorials.last.link, {:style=>'color:#FFFFFF;'}%></div>
             </th>
           </tr>
@@ -73,11 +77,11 @@
   </div>
 </section>
 
-<section class="wow slideInRight" style="visibility: visible; background-color:black;" id="contact">
-  <div class="container" style="background-color:black;">
+<section class="wow slideInRight" style="visibility: visible; background-color:#393E41;" id="contact">
+  <div class="container" style="background-color:#393E41;">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Contact Us</h2>
+        <h2 class="section-heading text-uppercase" style="color:white;">Contact Us</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
@@ -108,7 +112,7 @@
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" style="background:#3BC14A;">Send Message</button>
             </div>
           </div>
         </form>
@@ -121,7 +125,7 @@
     header.masthead {
       text-align: center;
       color: white;
-      background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVP9CQz32fHA/v0/800x-1.jpg");
+      background-color: #064789;
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: center center;
@@ -188,22 +192,24 @@
 
 .comparison table {
   width: 125%;
+  height: 300px;
   border-collapse: collapse;
   border-spacing: 0;
-  border-bottom:1px solid #CCC;
+  border-bottom:1px solid white;
   margin-left: 30px;
 }
 
 .comparison td, .comparison th {
-  border-right:1px solid #CCC;
+  border-right:1px solid white;
   empty-cells: show;
   padding:10px;
 }
 
 .compare-heading {
-  font-size:18px;
-  font-weight:bold !important;
-  border-bottom:0 !important;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  font-size:20px;
+  border-bottom:1 !important solid white;
   padding-top:10px !important;
   padding-left:10px !important;
 }
@@ -215,7 +221,7 @@
 .comparison th {
   font-weight:normal;
   padding:0;
-  border-bottom:1px solid #CCC;
+  border-bottom:1px solid white;
 }
 
 .comparison tr td:first-child {
@@ -223,10 +229,11 @@
 }
 
 .comparison .qbse, .comparison .qbo, .comparison .tl {
-  color:#FFF;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:white;
   padding:10px;
-  font-size:13px;
-  border-right:1px solid #CCC;
+  font-size:20px;
+  border-right:1px solid white;
   border-bottom:0;
 }
 
@@ -235,9 +242,11 @@
 }
 
 .comparison .qbse {
-  background:#0078C1;
+  background:#8693AB;
   border-top-left-radius: 3px;
-  border-left:0px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left:1px  solid white;
 }
 
 .comparison .qbo {
@@ -251,15 +260,29 @@
 }
 
 .comparison .free {
-  color:red;
+  color:#064789;
+  border-bottom: 1px solid #CCC;
+  font-size:15px;
 }
 
-.comparison .description, .comparison .description span {
-  color:green;
+.comparison .description1, .comparison .description1 span {
+  border-bottom: 1px solid #CCC;
+  color:#064789;
+  font-size:15px;
 }
 
-.comparison .description span {
-  font-size:32px;
+.comparison .description1 span {
+  padding-bottom: 50px;
+}
+
+.comparison .description2, .comparison .description2 span {
+  border-bottom: 1px solid #CCC;
+  color:#064789;
+  font-size:15px;
+}
+
+.comparison .description2 span {
+  padding-bottom: 50px;
 }
 
 .comparison .price-small {
@@ -270,7 +293,7 @@
 }
 
 .comparison .link {
-  background:purple;
+  background:#3BC14A;
   padding:10px 20px;
   font-size:12px;
   display:inline-block;
@@ -278,15 +301,20 @@
   text-decoration:none;
   border-radius:3px;
   text-transform:uppercase;
-  margin:5px 0 10px 0;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 55px;
 }
 
 .comparison .suitability {
-  font-size:12px;
+  border-bottom: 1px solid #CCC;
+  color:#064789;
+  font-size:15px;
 }
 
 .comparison .suitability a {
-  color:#202020;
+  color:#36213E;
 }
 
 @media (max-width: 767px) {

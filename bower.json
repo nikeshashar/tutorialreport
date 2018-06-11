@@ -1,0 +1,21 @@
+{
+  "name": "tutorial_report",
+  "homepage": "https://github.com/nikeshashar/tutorialreport",
+  "authors": [
+    "Tom <tom.w.page@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "wow": "wowjs#^1.1.2"
+  }
+}

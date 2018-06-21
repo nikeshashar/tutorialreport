@@ -1,10 +1,9 @@
 require 'yaml'
 
 namespace :upload_tutorials do
-
   desc 'Upload the new tutorials from the tutorials.yml file'
   task add_new_tutorials: :environment do
-    path = File.join(Rails.root, 'tutorials.yml')
+    path = File.join(Rails.root, 'data/tutorials.yml')
 
     if File.exist?(path)
       data = YAML.safe_load(File.open(path))

@@ -6,8 +6,7 @@ namespace :upload_tutorials do
     path = File.join(Rails.root, 'data/tutorials.yml')
 
     if File.exist?(path)
-      data = YAML.safe_load(File.open(path))
-      add_tutorials(data)
+      add_tutorials(YAML.safe_load(File.open(path)))
     else
       puts 'File can not be found'
     end

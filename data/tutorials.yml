@@ -1,15 +1,40 @@
-- title: This is the first tutorial
-  description: Blah blah blah blah blah blah blah blah blah blah blah blah blah
-     v blah blah blah blah blah blah v blah blah blah blah blah blah v blah blah blah
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-  link: www.hi.com
-- title: This is the second tutorial
-  description: Blah blah blah blah blah blah blah blah blah blah blah blah blah
-     v v blah blah blah blah blah blah v blah blah blah blah blah blah v blah blah blah
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-  link: www.hi.com
-- title: This is the third tutorial
-  description: Blah blah blah blah blah blah blah blah blah blah blah blah blah
-     v vvblah blah blah blah blah blah v blah blah blah blah blah blah v blah blah blah
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-  link: www.hi.com
+- title: JavaScript Bascis
+  description: This tutorial starts from the very bottom, explaining the very
+    basics of what JavaScript is, where it's used and how. Over the 381 minutes
+    of course time you'll learn about programming basics, (variables, data types etc)
+    functions, and even the basics of troubleshooting programming problems. Your
+    newly aquired knowledge will be put to the test with challenges throughout
+    the course.
+  link: https://teamtreehouse.com/library/javascript-basics
+  language: javaScript
+  free?: paid
+- title: Introduction to JavaScript
+  description: Codecademy's new look range of courses ensure that this beginners
+    introduction to JavaScript will be thorough. In a twelve step course which lasts
+    over eight weeks, the learner will be taken through concepts such as data types,
+    structures, functions and object orientated programming all within the context
+    of ES6 syntax. You will be honing these new skills buy building a variety of
+    different projects such as the rock paper scissors game, and writing scripts
+    which return a variety of random results.
+  link: https://www.codecademy.com/learn/introduction-to-javascript
+  language: javaScript
+  free?: paid
+- title: Intro to JavaScript
+  description: A comprehensive two week course which takes pupils through the
+    essentials of programming concepts. You will learn about variables and data-
+    types, conditionals, loops, functions, arrays and objects as well as taking
+    a quick look at the history of the language. One of the more robust free
+    courses.
+  link: https://eu.udacity.com/course/intro-to-javascript--ud803
+  language: javaScript
+  free?: free
+- title: JavaScript Tutorial
+  description: While W3 is most well known for it's resources explaining both
+    html and css, it also has a great JavaScript tutorial. With over 51 sections,
+    it helps explain everything from loops and conditionals, to JSON and the JS
+    style guide. Versitile in that it can be used as either a course to follow or
+    a JS resource guide, it's another example of why W3 schools is such a well
+    trusted site.  
+  link: https://www.w3schools.com/js/default.asp
+  language: javaScript
+  free?: free

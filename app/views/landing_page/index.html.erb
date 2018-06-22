@@ -43,29 +43,25 @@
               <th class="tutorial-info">
                 <div class="free"><%=@tutorials.first.free?%></div>
                 <div class="suitability"><%=@tutorials.first.suitability%></div>
-                <div class="description1"><%=@tutorials.first.description[0...100]%></div>
-                <div class="description2"><%=@tutorials.first.description[0...100]%></div>
+                <div class="description1"><%=@tutorials.first.description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials.first.link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
                 <div class="free"><%=@tutorials[1].free?%></div>
                 <div class="suitability"><%=@tutorials[1].suitability%></div>
-                <div class="description1"><%=@tutorials[1].description[0...100]%></div>
-                <div class="description2"><%=@tutorials[1].description[0...100]%></div>
+                <div class="description1"><%=@tutorials[1].description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials[1].link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
                 <div class="free"><%=@tutorials[2].free?%></div>
                 <div class="suitability"><%=@tutorials[2].suitability%></div>
-                <div class="description1"><%=@tutorials[2].description[0...100]%></div>
-                <div class="description2"><%=@tutorials[2].description[0...100]%></div>
+                <div class="description1"><%=@tutorials[2].description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials[2].link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
                 <div class="free"><%=@tutorials.last.free?%></div>
                 <div class="suitability"><%=@tutorials.last.suitability%></div>
-                <div class="description1"><%=@tutorials.last.description[0...100]%></div>
-                <div class="description2"><%=@tutorials.last.description[0...100]%></div>
+                <div class="description1"><%=@tutorials.last.description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials.last.link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
             </tr>

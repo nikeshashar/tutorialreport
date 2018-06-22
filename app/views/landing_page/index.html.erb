@@ -24,7 +24,21 @@
                 <%=@tutorials.last.language.capitalize%>
               </th>
             </tr>
-            <tr >
+            <tr>
+              <th class="tutorial-title">
+                <%=@tutorials.first.school_name%>
+              </th>
+              <th class="tutorial-title">
+                <%=@tutorials[1].school_name%>
+              </th>
+              <th class="tutorial-title">
+                <%=@tutorials[2].school_name%>
+              </th>
+              <th class="tutorial-title">
+                <%=@tutorials.last.school_name%>
+              </th>
+            </tr>
+            <tr>
               <th class="tutorial-title">
                 <%=@tutorials.first.title%>
               </th>
@@ -38,7 +52,6 @@
                 <%=@tutorials.last.title%>
               </th>
             </tr>
-
             <tr>
               <th class="tutorial-info">
                 <div class="free"><%=@tutorials.first.free?%></div>

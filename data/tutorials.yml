@@ -6,6 +6,7 @@
     newly aquired knowledge will be put to the test with challenges throughout
     the course.
   link: https://teamtreehouse.com/library/javascript-basics
+  school_name: Treehouse
   language: javaScript
   free?: paid
 - title: Introduction to JavaScript
@@ -17,6 +18,7 @@
     different projects such as the rock paper scissors game, and writing scripts
     which return a variety of random results.
   link: https://www.codecademy.com/learn/introduction-to-javascript
+  school_name: Codecademy
   language: javaScript
   free?: paid
 - title: Intro to JavaScript
@@ -26,6 +28,7 @@
     a quick look at the history of the language. One of the more robust free
     courses.
   link: https://eu.udacity.com/course/intro-to-javascript--ud803
+  school_name: Udacity
   language: javaScript
   free?: free
 - title: JavaScript Tutorial
@@ -34,7 +37,8 @@
     it helps explain everything from loops and conditionals, to JSON and the JS
     style guide. Versitile in that it can be used as either a course to follow or
     a JS resource guide, it's another example of why W3 schools is such a well
-    trusted site.  
+    trusted site.
   link: https://www.w3schools.com/js/default.asp
+  school_name: W3 Schools
   language: javaScript
   free?: free

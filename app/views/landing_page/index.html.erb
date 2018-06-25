@@ -53,26 +53,36 @@
               </th>
             </tr>
             <tr>
+              <th class="free">
+                <%=@tutorials.first.free?%>
+              </th>
+              <th class="free">
+                <%=@tutorials[1].free?%>
+              </th>
+              <th class="free">
+                <%=@tutorials[2].free?%>
+              </th>
+              <th class="free">
+                <%=@tutorials.last.free?%>
+              </th>
+            </tr>
+            <tr>
               <th class="tutorial-info">
-                <div class="free"><%=@tutorials.first.free?%></div>
                 <div class="suitability"><%=@tutorials.first.suitability%></div>
                 <div class="description1"><%=@tutorials.first.description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials.first.link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
-                <div class="free"><%=@tutorials[1].free?%></div>
                 <div class="suitability"><%=@tutorials[1].suitability%></div>
                 <div class="description1"><%=@tutorials[1].description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials[1].link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
-                <div class="free"><%=@tutorials[2].free?%></div>
                 <div class="suitability"><%=@tutorials[2].suitability%></div>
                 <div class="description1"><%=@tutorials[2].description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials[2].link, {:style=>'color:#FFFFFF;'}%></div>
               </th>
               <th class="tutorial-info">
-                <div class="free"><%=@tutorials.last.free?%></div>
                 <div class="suitability"><%=@tutorials.last.suitability%></div>
                 <div class="description1"><%=@tutorials.last.description%></div>
                 <div class="link"><%= link_to "Take me there!", @tutorials.last.link, {:style=>'color:#FFFFFF;'}%></div>
@@ -140,9 +150,14 @@
     padding-left: 10px !important;
   }
 
-  .main-table .free, .main-table .suitability, .main-table .description1, .main-table .description2 {
+  .main-table .main-table .suitability, .main-table .description1, .main-table .description2 {
       color: #064789;
       border-bottom: 1px solid #FFF;
+      font-size: 15px;
+    }
+
+    .main-table .free {
+      color: #064789;
       font-size: 15px;
     }
 
@@ -150,15 +165,13 @@
       background: #3BC14A;
       padding: 10px 20px;
       font-size: 12px;
-      display: inline-block;
+      display: block;
       color: #FFF;
+      text-align: center;
       text-decoration: none;
       border-bottom: 7px;
       text-transform: uppercase;
-      margin-top: 15px;
-      margin-right: 0px;
-      margin-bottom: 10px;
-      margin-left: 55px;
+      margin: auto;
     }
 
 
